@@ -21,7 +21,20 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="org.plasea.spring" />
+	
+	
+	<!-- <context:component-scan base-package="org.plasea.spring" /> -->
+	
+	
+	<!-- 自动扫描controller包下的所有类，使其认为spring mvc的控制器 -->
+	<context:component-scan base-package="org.plasea.spring,com.snailxr.base.**.controller"
+		use-default-filters="false"><!-- base-package 如果多个，用“,”分隔 -->
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	
+	
+
 	
 	
 	
