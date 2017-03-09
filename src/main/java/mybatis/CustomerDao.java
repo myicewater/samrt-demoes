@@ -4,17 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-
-
-
 import org.apache.ibatis.session.SqlSession;
-import org.junit.Test;
 public class CustomerDao {
 	public CustomerDao() {
 	}
 
 
-	@Test
+	//@Test
 	public void findCustomer() {
 
 
@@ -23,12 +19,12 @@ public class CustomerDao {
 		try {
 			//ssf = SessionFactoryUtil.getSqlSessionFactoryIntance();
 			sqlSession = SessionFactoryUtil.getSqlSessionIntance();
-			System.out.println(sqlSession); //Ã¿´Î¶¼ÊÇÐÂ½¨Ò»¸öSqlSessionÊµÀýorg.apache.ibatis.session.defaults.DefaultSqlSession@dc57db
+			System.out.println(sqlSession); //Ã¿ï¿½Î¶ï¿½ï¿½ï¿½ï¿½Â½ï¿½Ò»ï¿½ï¿½SqlSessionÊµï¿½ï¿½org.apache.ibatis.session.defaults.DefaultSqlSession@dc57db
 			
 			//sqlSession = SessionFactoryUtil.getSqlSessionIntance();
-			//System.out.println(sqlSession); //Ã¿´Î¶¼ÊÇÐÂ½¨Ò»¸öSqlSessionÊµÀýorg.apache.ibatis.session.defaults.DefaultSqlSession@c24c0
+			//System.out.println(sqlSession); //Ã¿ï¿½Î¶ï¿½ï¿½ï¿½ï¿½Â½ï¿½Ò»ï¿½ï¿½SqlSessionÊµï¿½ï¿½org.apache.ibatis.session.defaults.DefaultSqlSession@c24c0
 			
-			//resultType="hashmap"  ·µ»ØÀàÐÍÎª Map<id,Map<ÁÐÃû£¬Öµ>>
+			//resultType="hashmap"  ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª Map<id,Map<ï¿½ï¿½ï¿½ï¿½Öµ>>
 			Map<Object, Object> customerMap = (Map<Object, Object>) sqlSession.selectMap("selectCustomerAll2", "id");
 			System.out.println("customerMap : " + customerMap);
 			for(Map.Entry<Object, Object> customerSingle : customerMap.entrySet()) {
@@ -40,11 +36,11 @@ public class CustomerDao {
 				System.out.println("Name : " + map.get("name"));
 			}
 			
-			//resultType="Customer" ×Ô¶¯·â×°³É list
-			//Èç¹ûÃ»ÓÐ²éµ½Êý¾Ý£¬·µ»Ø³¤¶ÈÎª0µÄlist
+			//resultType="Customer" ï¿½Ô¶ï¿½ï¿½ï¿½×°ï¿½ï¿½ list
+			//ï¿½ï¿½ï¿½Ã»ï¿½Ð²éµ½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½Ø³ï¿½ï¿½ï¿½Îª0ï¿½ï¿½list
 			//List<Customer> customerList = sqlSession.selectList("selectCustomerAll");
 			
-			//²âÊÔ bind ÓÃÓÚ  like ²éÑ¯
+			//ï¿½ï¿½ï¿½ï¿½ bind ï¿½ï¿½ï¿½ï¿½  like ï¿½ï¿½Ñ¯
 			Customer customerBind = new Customer("Man",110,"service");
 			List<Customer> customerList = sqlSession.selectList("selectCustomerByBind", customerBind);
 
@@ -71,7 +67,7 @@ public class CustomerDao {
 	}
 
 
-	@Test
+	//@Test
 	public void saveCustomer() {
 		
 		SqlSession sqlSession = null;
@@ -79,9 +75,9 @@ public class CustomerDao {
 			sqlSession = SessionFactoryUtil.getSqlSessionIntance();
 			
 			Customer customer = new Customer("herry",110,"service");
-			int id = sqlSession.insert("saveCustomer", customer); //·µ»ØÓ°ÏìµÄÐÐÊý
+			int id = sqlSession.insert("saveCustomer", customer); //ï¿½ï¿½ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			System.out.println(id);
-			System.out.println(customer.getId()); //id ÒÑ¾­±»setÎª ×ÔÔö³¤µÄ key
+			System.out.println(customer.getId()); //id ï¿½Ñ¾ï¿½ï¿½ï¿½setÎª ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ key
 			
 			sqlSession.commit();
 		} catch (Exception e) {

@@ -30,8 +30,8 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
 	<bean id="springUtils" class="com.snailxr.base.support.spring.SpringUtils" />
 
 
-	<bean id="schedulerFactoryBean"
-		class="org.springframework.scheduling.quartz.SchedulerFactoryBean" />
+	<!-- <bean id="schedulerFactoryBean"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean" /> -->
 
 	<!-- 引入属性文件 -->
 	<context:property-placeholder location="classpath:config.properties" />

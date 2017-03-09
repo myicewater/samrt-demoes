@@ -6,6 +6,8 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
+import org.springframework.core.io.Resource;
+import org.springframework.util.Assert;
 
 public class SpringSource {
 
@@ -16,6 +18,11 @@ public class SpringSource {
 		ApplicationContext a;
 		
 		XmlBeanFactory x;
+		
+		Resource r;
+		
+		ApplicationContext t;
+		
 		
 		FileSystemXmlApplicationContext ff;
 		System.out.println(Object.class.isAssignableFrom(ArrayList.class));

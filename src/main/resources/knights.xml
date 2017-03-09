@@ -16,7 +16,7 @@
  
  <aop:config>
  	<aop:aspect ref="mistrel">
- 		<aop:pointcut expression="execution(* *.embarkOnQuest(..))" id="embark"/><!-- 切入点 -->
+ 		<aop:pointcut expression="execution(* springaop.Knight.embarkOnQuest(..))" id="embark"/><!-- 切入点 -->
  		<aop:before method="singBeforeQuest" pointcut-ref="embark"/>
  		<aop:after method="singAfterQuest" pointcut-ref="embark"/>
  		

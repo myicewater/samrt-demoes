@@ -66,6 +66,6 @@
 	
 	<!-- mapping 文件路径配置 -->
 	<mappers>
-		<mapper resource="mybatis/CustomerMapper.xml" />
+		<mapper resource="CustomerMapper.xml" />
 	</mappers>
 </configuration>
