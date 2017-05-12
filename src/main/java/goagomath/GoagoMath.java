@@ -10,8 +10,8 @@ public class GoagoMath
     {
         // TODO Auto-generated method stub
 
-        double a = 2.0D;
-        double b = 3.0d;
+        double a = 0.1;
+        double b = 0.01;
         double c = 0.00D;
         
         System.out.println(Double.MAX_EXPONENT);

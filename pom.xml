@@ -14,6 +14,23 @@
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
 	<dependencies>
+
+	<!-- https://mvnrepository.com/artifact/com.github.xuwei-k/html2image -->
+	<dependency>
+		<groupId>com.github.xuwei-k</groupId>
+		<artifactId>html2image</artifactId>
+		<version>0.1.0</version>
+	</dependency>
+	
+	<!-- https://mvnrepository.com/artifact/net.sf.cssbox/cssbox -->
+<dependency>
+    <groupId>net.sf.cssbox</groupId>
+    <artifactId>cssbox</artifactId>
+    <version>4.12</version>
+</dependency>
+	
+		
+	
 		<!-- Spring -->
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -286,11 +303,41 @@
 		</dependency>
 
 	<!-- https://mvnrepository.com/artifact/org.apache.mina/mina-core -->
-	<dependency>
-		<groupId>org.apache.mina</groupId>
-		<artifactId>mina-core</artifactId>
-		<version>3.0.0-M2</version>
-	</dependency>
+			<dependency>
+				<groupId>org.apache.mina</groupId>
+				<artifactId>mina-core</artifactId>
+				<version>3.0.0-M2</version>
+			</dependency>
+			
+			<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-catalina -->
+		<dependency>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>tomcat-catalina</artifactId>
+		    <version>7.0.77</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-coyote -->
+		<dependency>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>tomcat-coyote</artifactId>
+		    <version>7.0.77</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat.embed/tomcat-embed-core -->
+		<!-- <dependency>
+		    <groupId>org.apache.tomcat.embed</groupId>
+		    <artifactId>tomcat-embed-core</artifactId>
+		    <version>7.0.77</version>
+		</dependency> -->
+		<!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat-servlet-api -->
+		<dependency>
+		    <groupId>org.apache.tomcat</groupId>
+		    <artifactId>tomcat-servlet-api</artifactId>
+		    <version>7.0.77</version>
+		</dependency>
+				
+		
+			
 		
 		
 	</dependencies>
